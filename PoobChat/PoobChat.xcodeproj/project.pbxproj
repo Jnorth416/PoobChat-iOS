@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF40295A19C3003BF6EB /* PoobChatApp.swift */; };
-		2706BF43295A19C3003BF6EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF42295A19C3003BF6EB /* ContentView.swift */; };
 		2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF44295A19C4003BF6EB /* Assets.xcassets */; };
 		2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */; };
 		2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF49295A19C4003BF6EB /* Persistence.swift */; };
@@ -16,6 +15,9 @@
 		2706BF57295A19C5003BF6EB /* PoobChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF56295A19C5003BF6EB /* PoobChatTests.swift */; };
 		2706BF61295A19C5003BF6EB /* PoobChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF60295A19C5003BF6EB /* PoobChatUITests.swift */; };
 		2706BF63295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF62295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift */; };
+		27F8A400295A46A800E007CA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A3FF295A46A800E007CA /* RootView.swift */; };
+		27F8A404295A483000E007CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A403295A483000E007CA /* LoginView.swift */; };
+		27F8A406295A486200E007CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A405295A486200E007CA /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 /* Begin PBXFileReference section */
 		2706BF3D295A19C3003BF6EB /* PoobChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoobChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706BF40295A19C3003BF6EB /* PoobChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatApp.swift; sourceTree = "<group>"; };
-		2706BF42295A19C3003BF6EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2706BF44295A19C4003BF6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2706BF49295A19C4003BF6EB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +49,10 @@
 		2706BF5C295A19C5003BF6EB /* PoobChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoobChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706BF60295A19C5003BF6EB /* PoobChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatUITests.swift; sourceTree = "<group>"; };
 		2706BF62295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27F8A3FF295A46A800E007CA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		27F8A403295A483000E007CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		27F8A405295A486200E007CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		27F8A408295A4DF400E007CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +103,15 @@
 		2706BF3F295A19C3003BF6EB /* PoobChat */ = {
 			isa = PBXGroup;
 			children = (
+				27F8A408295A4DF400E007CA /* Info.plist */,
 				2706BF71295A298E003BF6EB /* Chat */,
 				2706BF72295A2998003BF6EB /* Friends */,
 				2706BF73295A29EA003BF6EB /* Login */,
 				2706BF74295A2A02003BF6EB /* Core */,
 				2706BF40295A19C3003BF6EB /* PoobChatApp.swift */,
-				2706BF42295A19C3003BF6EB /* ContentView.swift */,
+				27F8A3FF295A46A800E007CA /* RootView.swift */,
+				27F8A403295A483000E007CA /* LoginView.swift */,
+				27F8A405295A486200E007CA /* HomeView.swift */,
 				2706BF44295A19C4003BF6EB /* Assets.xcassets */,
 				2706BF46295A19C4003BF6EB /* Preview Content */,
 			);
@@ -295,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F8A400295A46A800E007CA /* RootView.swift in Sources */,
 				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
 				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
-				2706BF43295A19C3003BF6EB /* ContentView.swift in Sources */,
+				27F8A406295A486200E007CA /* HomeView.swift in Sources */,
+				27F8A404295A483000E007CA /* LoginView.swift in Sources */,
 				2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +469,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PoobChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -487,7 +497,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PoobChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
