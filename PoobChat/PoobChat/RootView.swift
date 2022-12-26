@@ -10,9 +10,9 @@ import SwiftUI
 struct RootView: View {
     var isLoggedIn = true
     var body: some View {
-        if isLoggedIn == true{
+        if isLoggedIn == true {
             LoginView()
-        }else{
+        } else {
             HomeView()
         }
     }
