@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF40295A19C3003BF6EB /* PoobChatApp.swift */; };
+		2706BF43295A19C3003BF6EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF42295A19C3003BF6EB /* ContentView.swift */; };
+		2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF44295A19C4003BF6EB /* Assets.xcassets */; };
+		2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */; };
+		2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF49295A19C4003BF6EB /* Persistence.swift */; };
+		2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF4B295A19C4003BF6EB /* PoobChat.xcdatamodeld */; };
+		2706BF57295A19C5003BF6EB /* PoobChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF56295A19C5003BF6EB /* PoobChatTests.swift */; };
+		2706BF61295A19C5003BF6EB /* PoobChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF60295A19C5003BF6EB /* PoobChatUITests.swift */; };
+		2706BF63295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF62295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2706BF53295A19C5003BF6EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2706BF35295A19C3003BF6EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2706BF3C295A19C3003BF6EB;
+			remoteInfo = PoobChat;
+		};
+		2706BF5D295A19C5003BF6EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2706BF35295A19C3003BF6EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2706BF3C295A19C3003BF6EB;
+			remoteInfo = PoobChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2706BF3D295A19C3003BF6EB /* PoobChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoobChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706BF40295A19C3003BF6EB /* PoobChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatApp.swift; sourceTree = "<group>"; };
+		2706BF42295A19C3003BF6EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2706BF44295A19C4003BF6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2706BF49295A19C4003BF6EB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2706BF4C295A19C4003BF6EB /* PoobChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoobChat.xcdatamodel; sourceTree = "<group>"; };
+		2706BF52295A19C5003BF6EB /* PoobChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoobChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706BF56295A19C5003BF6EB /* PoobChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatTests.swift; sourceTree = "<group>"; };
+		2706BF5C295A19C5003BF6EB /* PoobChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoobChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2706BF60295A19C5003BF6EB /* PoobChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatUITests.swift; sourceTree = "<group>"; };
+		2706BF62295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2706BF3A295A19C3003BF6EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF4F295A19C5003BF6EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF59295A19C5003BF6EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2706BF34295A19C3003BF6EB = {
+			isa = PBXGroup;
+			children = (
+				2706BF3F295A19C3003BF6EB /* PoobChat */,
+				2706BF55295A19C5003BF6EB /* PoobChatTests */,
+				2706BF5F295A19C5003BF6EB /* PoobChatUITests */,
+				2706BF3E295A19C3003BF6EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2706BF3E295A19C3003BF6EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF3D295A19C3003BF6EB /* PoobChat.app */,
+				2706BF52295A19C5003BF6EB /* PoobChatTests.xctest */,
+				2706BF5C295A19C5003BF6EB /* PoobChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2706BF3F295A19C3003BF6EB /* PoobChat */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF71295A298E003BF6EB /* Chat */,
+				2706BF72295A2998003BF6EB /* Friends */,
+				2706BF73295A29EA003BF6EB /* Login */,
+				2706BF74295A2A02003BF6EB /* Core */,
+				2706BF40295A19C3003BF6EB /* PoobChatApp.swift */,
+				2706BF42295A19C3003BF6EB /* ContentView.swift */,
+				2706BF44295A19C4003BF6EB /* Assets.xcassets */,
+				2706BF46295A19C4003BF6EB /* Preview Content */,
+			);
+			path = PoobChat;
+			sourceTree = "<group>";
+		};
+		2706BF46295A19C4003BF6EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2706BF55295A19C5003BF6EB /* PoobChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF56295A19C5003BF6EB /* PoobChatTests.swift */,
+			);
+			path = PoobChatTests;
+			sourceTree = "<group>";
+		};
+		2706BF5F295A19C5003BF6EB /* PoobChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF60295A19C5003BF6EB /* PoobChatUITests.swift */,
+				2706BF62295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift */,
+			);
+			path = PoobChatUITests;
+			sourceTree = "<group>";
+		};
+		2706BF71295A298E003BF6EB /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		2706BF72295A2998003BF6EB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		2706BF73295A29EA003BF6EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2706BF74295A2A02003BF6EB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2706BF49295A19C4003BF6EB /* Persistence.swift */,
+				2706BF4B295A19C4003BF6EB /* PoobChat.xcdatamodeld */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2706BF3C295A19C3003BF6EB /* PoobChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2706BF66295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChat" */;
+			buildPhases = (
+				2706BF39295A19C3003BF6EB /* Sources */,
+				2706BF3A295A19C3003BF6EB /* Frameworks */,
+				2706BF3B295A19C3003BF6EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoobChat;
+			productName = PoobChat;
+			productReference = 2706BF3D295A19C3003BF6EB /* PoobChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2706BF51295A19C5003BF6EB /* PoobChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2706BF69295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChatTests" */;
+			buildPhases = (
+				2706BF4E295A19C5003BF6EB /* Sources */,
+				2706BF4F295A19C5003BF6EB /* Frameworks */,
+				2706BF50295A19C5003BF6EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2706BF54295A19C5003BF6EB /* PBXTargetDependency */,
+			);
+			name = PoobChatTests;
+			productName = PoobChatTests;
+			productReference = 2706BF52295A19C5003BF6EB /* PoobChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2706BF5B295A19C5003BF6EB /* PoobChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2706BF6C295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChatUITests" */;
+			buildPhases = (
+				2706BF58295A19C5003BF6EB /* Sources */,
+				2706BF59295A19C5003BF6EB /* Frameworks */,
+				2706BF5A295A19C5003BF6EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2706BF5E295A19C5003BF6EB /* PBXTargetDependency */,
+			);
+			name = PoobChatUITests;
+			productName = PoobChatUITests;
+			productReference = 2706BF5C295A19C5003BF6EB /* PoobChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2706BF35295A19C3003BF6EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2706BF3C295A19C3003BF6EB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2706BF51295A19C5003BF6EB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2706BF3C295A19C3003BF6EB;
+					};
+					2706BF5B295A19C5003BF6EB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2706BF3C295A19C3003BF6EB;
+					};
+				};
+			};
+			buildConfigurationList = 2706BF38295A19C3003BF6EB /* Build configuration list for PBXProject "PoobChat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2706BF34295A19C3003BF6EB;
+			productRefGroup = 2706BF3E295A19C3003BF6EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2706BF3C295A19C3003BF6EB /* PoobChat */,
+				2706BF51295A19C5003BF6EB /* PoobChatTests */,
+				2706BF5B295A19C5003BF6EB /* PoobChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2706BF3B295A19C3003BF6EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */,
+				2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF50295A19C5003BF6EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF5A295A19C5003BF6EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2706BF39295A19C3003BF6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
+				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
+				2706BF43295A19C3003BF6EB /* ContentView.swift in Sources */,
+				2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF4E295A19C5003BF6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706BF57295A19C5003BF6EB /* PoobChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2706BF58295A19C5003BF6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706BF63295A19C5003BF6EB /* PoobChatUITestsLaunchTests.swift in Sources */,
+				2706BF61295A19C5003BF6EB /* PoobChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2706BF54295A19C5003BF6EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2706BF3C295A19C3003BF6EB /* PoobChat */;
+			targetProxy = 2706BF53295A19C5003BF6EB /* PBXContainerItemProxy */;
+		};
+		2706BF5E295A19C5003BF6EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2706BF3C295A19C3003BF6EB /* PoobChat */;
+			targetProxy = 2706BF5D295A19C5003BF6EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2706BF64295A19C5003BF6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2706BF65295A19C5003BF6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2706BF67295A19C5003BF6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2706BF68295A19C5003BF6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2706BF6A295A19C5003BF6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoobChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PoobChat";
+			};
+			name = Debug;
+		};
+		2706BF6B295A19C5003BF6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoobChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PoobChat";
+			};
+			name = Release;
+		};
+		2706BF6D295A19C5003BF6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PoobChat;
+			};
+			name = Debug;
+		};
+		2706BF6E295A19C5003BF6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JJN.PoobChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PoobChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2706BF38295A19C3003BF6EB /* Build configuration list for PBXProject "PoobChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706BF64295A19C5003BF6EB /* Debug */,
+				2706BF65295A19C5003BF6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2706BF66295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706BF67295A19C5003BF6EB /* Debug */,
+				2706BF68295A19C5003BF6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2706BF69295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706BF6A295A19C5003BF6EB /* Debug */,
+				2706BF6B295A19C5003BF6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2706BF6C295A19C5003BF6EB /* Build configuration list for PBXNativeTarget "PoobChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2706BF6D295A19C5003BF6EB /* Debug */,
+				2706BF6E295A19C5003BF6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2706BF4B295A19C4003BF6EB /* PoobChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2706BF4C295A19C4003BF6EB /* PoobChat.xcdatamodel */,
+			);
+			currentVersion = 2706BF4C295A19C4003BF6EB /* PoobChat.xcdatamodel */;
+			path = PoobChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2706BF35295A19C3003BF6EB /* Project object */;
+}
