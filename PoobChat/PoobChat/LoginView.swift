@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @State private var username: String = ""
     @State private var password: String = ""
-    
-    
-    
+
     var body: some View {
         VStack(spacing: 16){
             Image(systemName: "ellipsis.message")
