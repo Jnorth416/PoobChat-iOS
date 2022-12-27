@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  CreateAccountView.swift
 //  PoobChat
 //
 //  Created by Joshua North on 12/26/22.
@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct CreateAccountView: View {
     
     @State private var username: String = ""
     @State private var password: String = ""
-    @State private var showCreateAccountView = false
+    @State private var confirmPassword: String = ""
     
-
     var body: some View {
-        NavigationView{
             VStack(spacing: 16){
                 Text("Poob Chat")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                
                 Image(systemName: "ellipsis.message")
                     .font(.system(size: 150))
                     .scaledToFit()
                     .padding()
+                
                 TextField("Username", text: $username)
                     .padding()
                     .frame(width: 300, height: 50)
@@ -36,25 +36,25 @@ struct LoginView: View {
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(40)
                 
-                Button("Login"){
+                TextField("Confirm Password", text: $confirmPassword)
+                    .padding()
+                    .frame(width: 300, height: 50)
+                    .background(Color.black.opacity(0.05))
+                    .cornerRadius(40)
+                
+                Button("Create My Account"){
                     
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
                 .background(Color.blue)
                 .cornerRadius(40)
-                
-                Button(action: { showCreateAccountView = true }){
-                    Text("Create an Account Here")
-                    }
-                NavigationLink("",destination: CreateAccountView(), isActive: $showCreateAccountView)
-                }
-        }
+            }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct CreateAccountView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        CreateAccountView()
     }
 }
