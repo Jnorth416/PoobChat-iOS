@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct RootView: View {
-    var isLoggedIn = false
+    var isLoggedIn = true
     var body: some View {
         if isLoggedIn == false {
             LoginView()
         } else {
-            HomeView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "message.fill")
+                        Text("messages")
+                        
+                    }
+                ContactView()
+                    .tabItem {
+                        Image(systemName: "person.circle.fill")
+                        Text("Contacts")
+                    }
+            }
+            
         }
     }
 }
