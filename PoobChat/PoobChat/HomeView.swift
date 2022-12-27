@@ -17,14 +17,12 @@ struct HomeView: View {
                     } label: {
                         Image(systemName: "person.fill")
                             .foregroundColor(.black)
-                            
                             .font(.system(size: 34))
                     }
                     
                     VStack(){
                         Text("Username")
                             .font(.system(size: 24, weight: .bold))
-                        
                     }
                     Spacer()
                     Button {
@@ -32,11 +30,7 @@ struct HomeView: View {
                     } label: {
                         Image(systemName: "bubble.left")
                             .foregroundColor(.black)
-                            
-                            
                     }
-                    
-                
                 }
                 .padding()
                 Divider()
@@ -47,7 +41,6 @@ struct HomeView: View {
                                 NavigationLink {
                                     Text("Destination")
                                 } label: {
-
                                     HStack(spacing: 15){
                                         Image(systemName: "person.fill")
                                             .font(.system(size: 30))
@@ -61,39 +54,27 @@ struct HomeView: View {
                                             Text("Message sent to user")
                                                 .font(.system(size: 14))
                                                 .foregroundColor(Color(.lightGray))
-                                            
                                         }
                                         Spacer()
                                         Text("22d")
                                             .font(.system(size: 14, weight: .semibold))
                                             .foregroundColor(.black)
+                                        }
                                     }
-                                }
                                 }
                                 .padding(.vertical, 11)
                                 Divider()
                             }
                             .padding(.horizontal)
-                            
                         }
                     }
                     
                 }
                 .padding(.bottom)
-                
-               
-            
             }
             .toolbar(.hidden)
-            
-            
         }
-        
-    
     }
-
-
-
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
