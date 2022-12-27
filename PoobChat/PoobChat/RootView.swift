@@ -13,20 +13,22 @@ struct RootView: View {
         if isLoggedIn == false {
             LoginView()
         } else {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "message.fill")
-                        Text("messages")
-                        
-                    }
-                ContactView()
-                    .tabItem {
-                        Image(systemName: "person.circle.fill")
-                        Text("Contacts")
-                    }
-            }
-            
+            tabBar
+        }
+    }
+    
+    var tabBar: some View{
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "message.fill")
+                    Text("messages")
+                }
+            ContactView()
+                .tabItem {
+                    Image(systemName: "person.circle.fill")
+                    Text("Contacts")
+                }
         }
     }
 }
