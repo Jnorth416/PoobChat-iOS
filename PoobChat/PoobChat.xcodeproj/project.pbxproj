@@ -18,7 +18,11 @@
 		2774C411295B75F8003F15CF /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C410295B75F8003F15CF /* ContactView.swift */; };
 		2774C413295BB94C003F15CF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C412295BB94C003F15CF /* UserRepository.swift */; };
 		2774C415295CB8EE003F15CF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C414295CB8EE003F15CF /* APIService.swift */; };
+		2774C419295CD050003F15CF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C418295CD050003F15CF /* UserService.swift */; };
+		2774C41B295CD4FD003F15CF /* UserRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C41A295CD4FD003F15CF /* UserRequestDTO.swift */; };
+		2774C41D295CD50B003F15CF /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774C41C295CD50B003F15CF /* UserResponseDTO.swift */; };
 		27D00787295A5CDF0066F9EE /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D00786295A5CDF0066F9EE /* CreateAccountView.swift */; };
+		27D393DA295D01E000E9080A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393D9295D01E000E9080A /* Constants.swift */; };
 		27F8A400295A46A800E007CA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A3FF295A46A800E007CA /* RootView.swift */; };
 		27F8A404295A483000E007CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A403295A483000E007CA /* LoginView.swift */; };
 		27F8A406295A486200E007CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A405295A486200E007CA /* HomeView.swift */; };
@@ -56,7 +60,11 @@
 		2774C410295B75F8003F15CF /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		2774C412295BB94C003F15CF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		2774C414295CB8EE003F15CF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2774C418295CD050003F15CF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2774C41A295CD4FD003F15CF /* UserRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDTO.swift; sourceTree = "<group>"; };
+		2774C41C295CD50B003F15CF /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		27D00786295A5CDF0066F9EE /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		27D393D9295D01E000E9080A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27F8A3FF295A46A800E007CA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		27F8A403295A483000E007CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		27F8A405295A486200E007CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -116,14 +124,6 @@
 				2706BF72295A2998003BF6EB /* Friends */,
 				2706BF73295A29EA003BF6EB /* Login */,
 				2706BF74295A2A02003BF6EB /* Core */,
-				2706BF40295A19C3003BF6EB /* PoobChatApp.swift */,
-				27F8A3FF295A46A800E007CA /* RootView.swift */,
-				27F8A403295A483000E007CA /* LoginView.swift */,
-				27D00786295A5CDF0066F9EE /* CreateAccountView.swift */,
-				2774C414295CB8EE003F15CF /* APIService.swift */,
-				27F8A405295A486200E007CA /* HomeView.swift */,
-				2774C410295B75F8003F15CF /* ContactView.swift */,
-				2774C412295BB94C003F15CF /* UserRepository.swift */,
 				2706BF44295A19C4003BF6EB /* Assets.xcassets */,
 				2706BF46295A19C4003BF6EB /* Preview Content */,
 			);
@@ -158,6 +158,7 @@
 		2706BF71295A298E003BF6EB /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				27F8A405295A486200E007CA /* HomeView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 		2706BF72295A2998003BF6EB /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				2774C410295B75F8003F15CF /* ContactView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -172,6 +174,12 @@
 		2706BF73295A29EA003BF6EB /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2774C418295CD050003F15CF /* UserService.swift */,
+				27F8A403295A483000E007CA /* LoginView.swift */,
+				2774C412295BB94C003F15CF /* UserRepository.swift */,
+				27D00786295A5CDF0066F9EE /* CreateAccountView.swift */,
+				2774C41A295CD4FD003F15CF /* UserRequestDTO.swift */,
+				2774C41C295CD50B003F15CF /* UserResponseDTO.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -179,8 +187,12 @@
 		2706BF74295A2A02003BF6EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2774C414295CB8EE003F15CF /* APIService.swift */,
 				2706BF49295A19C4003BF6EB /* Persistence.swift */,
 				2706BF4B295A19C4003BF6EB /* PoobChat.xcdatamodeld */,
+				27F8A3FF295A46A800E007CA /* RootView.swift */,
+				2706BF40295A19C3003BF6EB /* PoobChatApp.swift */,
+				27D393D9295D01E000E9080A /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -321,9 +333,13 @@
 				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
 				2774C411295B75F8003F15CF /* ContactView.swift in Sources */,
 				27D00787295A5CDF0066F9EE /* CreateAccountView.swift in Sources */,
+				2774C419295CD050003F15CF /* UserService.swift in Sources */,
 				2774C415295CB8EE003F15CF /* APIService.swift in Sources */,
 				27F8A406295A486200E007CA /* HomeView.swift in Sources */,
 				27F8A404295A483000E007CA /* LoginView.swift in Sources */,
+				2774C41D295CD50B003F15CF /* UserResponseDTO.swift in Sources */,
+				27D393DA295D01E000E9080A /* Constants.swift in Sources */,
+				2774C41B295CD4FD003F15CF /* UserRequestDTO.swift in Sources */,
 				2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

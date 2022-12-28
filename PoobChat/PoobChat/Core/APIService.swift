@@ -31,6 +31,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             print(String(data: data, encoding: .utf8)!)
             do {
                 let responseObject = try decoder.decode([ResponseType].self, from: data)
@@ -71,6 +72,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 completion(responseObject,error)
@@ -83,7 +85,6 @@ class APIService{
         }
         task.resume()
     }
-    
     
     func taskForPutRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
         guard let url = urlPath(url: path) else {
@@ -105,6 +106,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 completion(responseObject,error)
@@ -117,7 +119,6 @@ class APIService{
         }
         task.resume()
     }
-    
     
     func logoutFunc(path: String, completion: @escaping(Bool,Error?) -> Void){
         guard let url = urlPath(url: path) else {
@@ -134,7 +135,6 @@ class APIService{
         }
         task.resume()
     }
-    
     
     private func urlPath(url: String) -> URL? {
         let url = URL(string: "\(baseURL)\(url)")
