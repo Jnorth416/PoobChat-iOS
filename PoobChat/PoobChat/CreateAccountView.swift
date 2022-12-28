@@ -43,7 +43,13 @@ struct CreateAccountView: View {
                     .cornerRadius(40)
                 
                 Button("Create My Account"){
-                    
+                    do {
+                       
+                        try UserRepository().saveUser(id: 2, username: username, creationDate: Date())
+                        
+                    } catch {
+                        print(error)
+                    }
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)

@@ -13,7 +13,6 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var showCreateAccountView = false
     
-
     var body: some View {
         NavigationView{
             VStack(spacing: 16){
@@ -37,7 +36,11 @@ struct LoginView: View {
                     .cornerRadius(40)
                 
                 Button("Login"){
-                    
+                    do {
+                        try UserRepository().saveUser(id: 2, username: username, creationDate: Date())
+                    } catch {
+                        print(error)
+                    }
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)

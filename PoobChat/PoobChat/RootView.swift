@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RootView: View {
-    var isLoggedIn = true
-    var body: some View {
-        if isLoggedIn == false {
+
+    @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
+    
+        var body: some View {
+        if users.first == nil {
             LoginView()
         } else {
             tabBar
