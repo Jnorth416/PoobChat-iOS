@@ -29,7 +29,8 @@ class UserRepository {
     func saveUserDTO(dto: UserResponseDTO) throws {
         let user = getUser(id: dto.id) ?? User(context: context)
         user.username = dto.username
+        user.id = dto.id
+        user.creationDate = dto.createdAt
         try context.save()
-                
     }
 }

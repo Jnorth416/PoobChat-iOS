@@ -31,6 +31,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             print(String(data: data, encoding: .utf8)!)
             do {
                 let responseObject = try decoder.decode([ResponseType].self, from: data)
@@ -71,6 +72,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 completion(responseObject,error)
@@ -104,6 +106,7 @@ class APIService{
                 return
             }
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 completion(responseObject,error)

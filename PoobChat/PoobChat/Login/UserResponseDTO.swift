@@ -15,7 +15,7 @@ struct LoginResponseDTO: Codable{
 }
 
 struct UserResponseDTO: Codable{
-    let createdAt: String
+    let createdAt: Date
     let id: String
     let pushToken: String?
     let username: String
