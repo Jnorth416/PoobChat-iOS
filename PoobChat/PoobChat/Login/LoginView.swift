@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var showCreateAccountView = false
+    @StateObject private var userService = UserService()
     
     var body: some View {
         NavigationView{
@@ -36,9 +37,7 @@ struct LoginView: View {
                     .cornerRadius(40)
                 
                 Button("Login"){
-                    do {
-                        try UserRepository().saveUser(id: 2, username: username, creationDate: Date())
-                    } catch {
+                    userService.userLogin(username: username, password: password) { response, error in
                         print(error)
                     }
                 }

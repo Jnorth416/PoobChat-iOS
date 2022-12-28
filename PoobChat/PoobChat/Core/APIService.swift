@@ -84,7 +84,6 @@ class APIService{
         task.resume()
     }
     
-    
     func taskForPutRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
         guard let url = urlPath(url: path) else {
             completion(nil, ErrorType.invalidURL)
@@ -118,7 +117,6 @@ class APIService{
         task.resume()
     }
     
-    
     func logoutFunc(path: String, completion: @escaping(Bool,Error?) -> Void){
         guard let url = urlPath(url: path) else {
             completion(false, ErrorType.invalidURL)
@@ -134,7 +132,6 @@ class APIService{
         }
         task.resume()
     }
-    
     
     private func urlPath(url: String) -> URL? {
         let url = URL(string: "\(baseURL)\(url)")
