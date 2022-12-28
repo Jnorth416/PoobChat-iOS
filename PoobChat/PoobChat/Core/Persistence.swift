@@ -50,6 +50,7 @@ struct PersistenceController {
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+            print("-- core data located at: \(storeDescription.url?.absoluteString ?? "ARGH?")")
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
