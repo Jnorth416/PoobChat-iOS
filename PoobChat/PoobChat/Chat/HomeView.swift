@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
    
+    @StateObject var conversationService = ConversationService()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0){
@@ -37,7 +39,10 @@ struct HomeView: View {
                 }
                 Spacer()
                 Button {
-                    
+                    conversationService.userConversations(){ response, error in
+                    print(error)
+                        
+                }
                 } label: {
                     Image(systemName: "bubble.left")
                         .foregroundColor(.black)
