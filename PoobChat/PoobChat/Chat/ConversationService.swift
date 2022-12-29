@@ -10,13 +10,8 @@ import Foundation
 
 class ConversationService: ObservableObject{
     
-    
-    
-    
-    
     private lazy var apiService = APIService(baseURL: Constants.baseURL)
     private let conversationRepo = ConversationRepository()
-    
     
     enum ErrorType: Error{
         case conversationError
@@ -24,9 +19,7 @@ class ConversationService: ObservableObject{
     
     enum Endpoints: String {
         case conversation = "/conversation"
-        
     }
-    
     
     func userConversations(completion: @escaping (Bool, Error?) -> Void){
         apiService.taskForGetRequest(path: Endpoints.conversation.rawValue, isAuthed: true, responseType: ConversationResponseDTO.self) {
@@ -50,9 +43,4 @@ class ConversationService: ObservableObject{
             }
         }
     }
-    
-    
-    
-    
-    
 }

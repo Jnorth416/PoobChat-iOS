@@ -12,9 +12,8 @@ struct ConversationResponseDTO: Codable {
     let id: String
     let preview: String
     let unreadCount: Int64
-    let updatedAt: String
+    let updatedAt: Date
     let username: String
-    
     
     enum CodingKeys: String, CodingKey{
         case id

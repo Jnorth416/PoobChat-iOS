@@ -6,15 +6,15 @@
 //
 
 import Foundation
+import CoreData
 
 
 class ConversationRepository{
     let context = PersistenceController.shared.container.viewContext
     
-    
     func saveConversationDTO(conversationDTOs: [ConversationResponseDTO]) throws {
         for dto in conversationDTOs  {
-            let conversation = Conversation(context: context)
+            let conversation = getConversation(id: dto.id ) ?? Conversation(context: context)
             conversation.username = dto.username
             conversation.id = dto.id
             conversation.preview = dto.preview
@@ -22,5 +22,12 @@ class ConversationRepository{
             conversation.updatedAt = dto.updatedAt
         }
         try context.save()
+    }
+    
+    func getConversation(id: String) -> Conversation? {
+        let request: NSFetchRequest<Conversation> = Conversation.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", id)
+        let results = try? context.fetch(request)
+        return results?.first
     }
 }
