@@ -40,7 +40,7 @@ class APIService{
                 let responseObject = try decoder.decode([ResponseType].self, from: data)
                 DispatchQueue.main.async{
                     completion(responseObject,nil)
-                    print(error)
+                    print(error ?? "No error")
                 }
                 print(responseObject)
             }catch {

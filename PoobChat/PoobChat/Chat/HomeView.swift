@@ -24,7 +24,7 @@ struct HomeView: View {
             .task {
                 do {
                     conversationService.userConversations(){ response, error in
-                        print(error)
+                        print(error ?? "No error")
                     }
                 } catch {
                     

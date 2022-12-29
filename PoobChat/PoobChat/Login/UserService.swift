@@ -40,7 +40,7 @@ class UserService: ObservableObject {
                     print("boof")
                 } else {
                     completion(false, ErrorType.registrationError)
-                    print(error)
+                    print(error ?? "No error")
                 }
             }
         }
@@ -66,7 +66,7 @@ class UserService: ObservableObject {
                     print("boof")
                 } else {
                     completion(false, ErrorType.loginError)
-                    print(error)
+                    print(error ?? "No error")
                 }
             }
         }

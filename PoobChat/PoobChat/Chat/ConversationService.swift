@@ -38,7 +38,7 @@ class ConversationService: ObservableObject{
                     print("boof")
                 } else {
                     completion(false, ErrorType.conversationError)
-                    print(error)
+                    print(error ?? "No error")
                 }
             }
         }
