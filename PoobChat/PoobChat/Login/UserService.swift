@@ -23,7 +23,7 @@ class UserService: ObservableObject {
     
     func userRegistration(username: String, password: String, completion: @escaping (Bool, Error?) -> Void){
         let body = LoginRequestDTO(username: username, password: password)
-        apiService.taskForPostRequest(path: Endpoints.register.rawValue, responseType:  LoginResponseDTO.self, body: body) {
+        apiService.taskForPostRequest(path: Endpoints.register.rawValue, isAuthed: false, responseType:  LoginResponseDTO.self, body: body) {
             response, error in
             if let error = error {
                 completion(false, error)
@@ -48,7 +48,7 @@ class UserService: ObservableObject {
     
     func userLogin(username: String, password: String, completion: @escaping (Bool, Error?) -> Void){
         let body = LoginRequestDTO(username: username, password: password)
-        apiService.taskForPostRequest(path: Endpoints.login.rawValue, responseType: LoginResponseDTO.self, body: body) {
+        apiService.taskForPostRequest(path: Endpoints.login.rawValue, isAuthed: false, responseType: LoginResponseDTO.self, body: body) {
             response, error in
             if let error = error {
                 completion(false, error)
