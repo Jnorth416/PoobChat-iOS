@@ -19,13 +19,16 @@ class APIService{
         self.baseURL = baseURL
     }
     
-    func taskForGetRequest<ResponseType: Decodable>(path: String, responseType: ResponseType.Type, completion: @escaping ([ResponseType]?, Error?) -> Void) {
+    func taskForGetRequest<ResponseType: Decodable>(path: String, isAuthed: Bool, responseType: ResponseType.Type, completion: @escaping ([ResponseType]?, Error?) -> Void) {
         guard let url = urlPath(url: path) else {
             completion(nil, ErrorType.invalidURL)
             return
         }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        if isAuthed == true, let token = UserDefaults.standard.object(forKey: Constants.tokenKey) {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+        }
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 completion(nil,error)
                 return
@@ -37,7 +40,7 @@ class APIService{
                 let responseObject = try decoder.decode([ResponseType].self, from: data)
                 DispatchQueue.main.async{
                     completion(responseObject,nil)
-                    print(error)
+                    print(error ?? "No error")
                 }
                 print(responseObject)
             }catch {

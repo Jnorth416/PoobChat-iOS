@@ -46,7 +46,7 @@ struct CreateAccountView: View {
             Button("Create My Account"){
                 if password == confirmPassword {
                     userService.userRegistration(username: username, password: password) { response, error in
-                        print(error)
+                        print(error ?? "No error")
                     }
                 }
             }

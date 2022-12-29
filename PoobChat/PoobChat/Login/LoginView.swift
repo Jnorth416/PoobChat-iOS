@@ -38,7 +38,7 @@ struct LoginView: View {
                 
                 Button("Login"){
                     userService.userLogin(username: username, password: password) { response, error in
-                        print(error)
+                        print(error ?? "No error")
                     }
                 }
                 .foregroundColor(.white)

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-   
+    
+    @StateObject var conversationService = ConversationService()
+    @FetchRequest(sortDescriptors: []) var convos: FetchedResults<Conversation>
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0){
@@ -18,6 +21,11 @@ struct HomeView: View {
                 }
             }
         }.toolbar(.hidden)
+            .task {
+                conversationService.userConversations(){ response, error in
+                    print(error ?? "No error")
+                }
+            }
     }
     
     var navBar: some View{
@@ -50,9 +58,9 @@ struct HomeView: View {
     
     var messageList: some View{
         LazyVStack(spacing: 0){
-            ForEach(0..<10, id: \.self){ num in
+            ForEach(convos, id: \.self){ convo in
                 VStack(spacing: 0) {
-                    rowView(num)
+                    rowView(convo)
                 }
                 .padding(.vertical, 11)
                 Divider()
@@ -61,7 +69,7 @@ struct HomeView: View {
         }
     }
     
-    func rowView(_ num: Int) -> some View {
+    func rowView(_ convo: Conversation) -> some View {
         NavigationLink {
             Text("Destination")
         } label: {
@@ -72,15 +80,15 @@ struct HomeView: View {
                     .overlay(RoundedRectangle(cornerRadius: 44).stroke(Color.black, lineWidth: 2))
                     .foregroundColor(.black)
                 VStack(alignment: .leading){
-                    Text("Username")
+                    Text(convo.username ?? "")
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.black)
-                    Text("Message sent to user")
+                    Text(convo.preview ?? "")
                         .font(.system(size: 14))
                         .foregroundColor(Color(.lightGray))
                 }
                 Spacer()
-                Text("22d")
+                Text(convo.updatedAt ?? Date(), format: Date.FormatStyle().month().day().year() )
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundColor(.black)
             }

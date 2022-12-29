@@ -23,7 +23,7 @@ class UserService: ObservableObject {
     
     func userRegistration(username: String, password: String, completion: @escaping (Bool, Error?) -> Void){
         let body = LoginRequestDTO(username: username, password: password)
-        apiService.taskForPostRequest(path: Endpoints.register.rawValue, responseType: LoginResponseDTO.self, body: body) {
+        apiService.taskForPostRequest(path: Endpoints.register.rawValue, responseType:  LoginResponseDTO.self, body: body) {
             response, error in
             if let error = error {
                 completion(false, error)
@@ -40,7 +40,7 @@ class UserService: ObservableObject {
                     print("boof")
                 } else {
                     completion(false, ErrorType.registrationError)
-                    print(error)
+                    print(error ?? "No error")
                 }
             }
         }
@@ -66,7 +66,7 @@ class UserService: ObservableObject {
                     print("boof")
                 } else {
                     completion(false, ErrorType.loginError)
-                    print(error)
+                    print(error ?? "No error")
                 }
             }
         }
