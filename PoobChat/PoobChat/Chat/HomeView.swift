@@ -22,12 +22,8 @@ struct HomeView: View {
             }
         }.toolbar(.hidden)
             .task {
-                do {
-                    conversationService.userConversations(){ response, error in
-                        print(error ?? "No error")
-                    }
-                } catch {
-                    
+                conversationService.userConversations(){ response, error in
+                    print(error ?? "No error")
                 }
             }
     }
