@@ -14,6 +14,7 @@ struct ConversationResponseDTO: Codable {
     let unreadCount: Int64
     let updatedAt: Date
     let username: String
+    let recipientId: String
     
     enum CodingKeys: String, CodingKey{
         case id
@@ -21,5 +22,6 @@ struct ConversationResponseDTO: Codable {
         case unreadCount = "unread_count"
         case updatedAt = "updated_at"
         case username
+        case recipientId = "recipient_id"
     }
 }

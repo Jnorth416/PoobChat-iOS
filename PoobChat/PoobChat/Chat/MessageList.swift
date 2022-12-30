@@ -26,13 +26,13 @@ struct MessageList: View {
                     HStack{
                         Spacer()
                         SenderMessage(message: message.content ?? "?")
-                            .border(Color.black)
+                            
                     }
                 } else {
                     HStack{
                         Spacer()
-                        RecievedMessage(message: message.content ?? "?")
-                            .border(Color.red)
+                        RecievedMessage(message: message.content ?? "?", timestamp: message.timestamp ?? Date())
+                            
                     }
                 }
             }

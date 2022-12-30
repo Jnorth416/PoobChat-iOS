@@ -42,6 +42,29 @@ class MessageService: ObservableObject {
         }
     }
     
+    func sendUserMessage(content: String, SenderId: String, recipientId: String, completion: @escaping (Bool, Error?) -> Void){
+        let body = MessageRequestDTO(message: MessageData(content: content, senderId: SenderId, recipientId: recipientId))
+        apiService.taskForPostRequest(path: Endpoints.message.rawValue, isAuthed: true, responseType: MessageResponseDTO.self, body: body) { response, error in
+            if let error = error {
+                completion(false, error)
+                
+            } else {
+                if let response = response{
+                    do {
+                        try self.messageRepo.saveMessageDTO(messageDTOs: [response])
+                    } catch {
+                        print(error)
+                    }
+                    completion(true, nil)
+                    print("boof")
+                } else {
+                    completion(false, ErrorType.messageError)
+                    print(error ?? "No error")
+                }
+            }
+        }
+    }
+    
     
     func messageQueryParameters(id: String) -> String{
         let combined = "\(Endpoints.message.rawValue)"+"?conversation_id=\(id)"

@@ -34,6 +34,8 @@
 		27D393F3295E30F600E9080A /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393F2295E30F600E9080A /* MessageService.swift */; };
 		27D393F5295E310900E9080A /* MessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393F4295E310900E9080A /* MessageRepository.swift */; };
 		27D393F7295E32DB00E9080A /* MessageResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393F6295E32DB00E9080A /* MessageResponseDTO.swift */; };
+		27D393F9295E5E3500E9080A /* MessageChatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393F8295E5E3500E9080A /* MessageChatBox.swift */; };
+		27D393FD295E6AC500E9080A /* MessageRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D393FC295E6AC500E9080A /* MessageRequestDTO.swift */; };
 		27F8A400295A46A800E007CA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A3FF295A46A800E007CA /* RootView.swift */; };
 		27F8A404295A483000E007CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A403295A483000E007CA /* LoginView.swift */; };
 		27F8A406295A486200E007CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8A405295A486200E007CA /* HomeView.swift */; };
@@ -87,6 +89,8 @@
 		27D393F2295E30F600E9080A /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		27D393F4295E310900E9080A /* MessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRepository.swift; sourceTree = "<group>"; };
 		27D393F6295E32DB00E9080A /* MessageResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageResponseDTO.swift; sourceTree = "<group>"; };
+		27D393F8295E5E3500E9080A /* MessageChatBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageChatBox.swift; sourceTree = "<group>"; };
+		27D393FC295E6AC500E9080A /* MessageRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRequestDTO.swift; sourceTree = "<group>"; };
 		27F8A3FF295A46A800E007CA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		27F8A403295A483000E007CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		27F8A405295A486200E007CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -186,9 +190,11 @@
 				27D393E9295E1FD100E9080A /* MessageList.swift */,
 				27D393ED295E281C00E9080A /* MessageNavBar.swift */,
 				27D393E1295E16C600E9080A /* MessageView.swift */,
+				27D393F8295E5E3500E9080A /* MessageChatBox.swift */,
 				27D393F2295E30F600E9080A /* MessageService.swift */,
 				27D393F4295E310900E9080A /* MessageRepository.swift */,
 				27D393F6295E32DB00E9080A /* MessageResponseDTO.swift */,
+				27D393FC295E6AC500E9080A /* MessageRequestDTO.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D393E8295E1B4500E9080A /* RecievedMessage.swift in Sources */,
+				27D393F9295E5E3500E9080A /* MessageChatBox.swift in Sources */,
 				27D393DE295D0D4400E9080A /* ConversationService.swift in Sources */,
 				27F8A400295A46A800E007CA /* RootView.swift in Sources */,
 				27D393F7295E32DB00E9080A /* MessageResponseDTO.swift in Sources */,
@@ -376,6 +383,7 @@
 				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
 				2774C413295BB94C003F15CF /* UserRepository.swift in Sources */,
 				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
+				27D393FD295E6AC500E9080A /* MessageRequestDTO.swift in Sources */,
 				2774C411295B75F8003F15CF /* ContactView.swift in Sources */,
 				27D00787295A5CDF0066F9EE /* CreateAccountView.swift in Sources */,
 				2774C419295CD050003F15CF /* UserService.swift in Sources */,
@@ -551,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
+				DEVELOPMENT_TEAM = CLY266LCNG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoobChat/Info.plist;
@@ -558,6 +567,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PoobChat/Preview Content\"";
+				DEVELOPMENT_TEAM = CLY266LCNG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoobChat/Info.plist;
@@ -586,6 +597,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

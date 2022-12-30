@@ -71,8 +71,11 @@ struct HomeView: View {
     
     func rowView(_ convo: Conversation) -> some View {
         NavigationLink {
-            MessageView(conversationId: convo.id!)
-            
+            MessageView(
+                conversationId: convo.id!,
+                recipientId: convo.recipientId!,
+                username: convo.username!
+            )        
         } label: {
             HStack(spacing: 15){
                 Image(systemName: "person.fill")

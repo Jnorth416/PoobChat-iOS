@@ -9,13 +9,19 @@ import SwiftUI
 
 struct MessageView: View {
     
+    @FetchRequest(sortDescriptors: []) var conversation: FetchedResults<Conversation>
     let messageService = MessageService()
     
     let conversationId: String
+    let recipientId: String
+    let username: String
     var body: some View {
+        Divider()
         VStack{
 //            MessageNavBar()
             MessageList(convoId: conversationId)
+            Divider()
+            MessageChatBox(recipientId: recipientId)
         }
         
         .task {
@@ -23,12 +29,14 @@ struct MessageView: View {
                 print("boof")
             }
         }
+        .navigationTitle(username)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(conversationId: "id")
+        MessageView(conversationId: "id", recipientId: "arggghhhh", username: "Ploobert")
     }
 }
