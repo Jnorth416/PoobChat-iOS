@@ -54,15 +54,20 @@ class APIService{
         task.resume()
     }
     
-    func taskForPostRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
+    func taskForPostRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, isAuthed: Bool, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
         guard let url = urlPath(url: path) else {
             completion(nil, ErrorType.invalidURL)
             return
         }
         var request = URLRequest(url: url)
+        
         request.httpMethod = "POST"
+        if isAuthed == true, let token = UserDefaults.standard.object(forKey: Constants.tokenKey) {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+        }
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         request.httpBody = try! JSONEncoder().encode(body)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
@@ -89,7 +94,7 @@ class APIService{
         task.resume()
     }
     
-    func taskForPutRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
+    func taskForPutRequest<RequestType: Encodable, ResponseType: Decodable>(path: String, isAuthed: Bool, responseType: ResponseType.Type, body: RequestType, completion: @escaping(ResponseType?,Error?) -> Void){
         guard let url = urlPath(url: path) else {
             completion(nil, ErrorType.invalidURL)
             return

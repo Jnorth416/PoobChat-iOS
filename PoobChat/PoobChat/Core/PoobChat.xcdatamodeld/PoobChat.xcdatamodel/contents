@@ -3,6 +3,7 @@
     <entity name="Conversation" representedClassName="Conversation" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="preview" optional="YES" attributeType="String"/>
+        <attribute name="recipientId" optional="YES" attributeType="String"/>
         <attribute name="unreadCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="username" optional="YES" attributeType="String"/>
@@ -14,6 +15,7 @@
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
         <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="conversationId" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="read" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="recipientId" optional="YES" attributeType="String"/>

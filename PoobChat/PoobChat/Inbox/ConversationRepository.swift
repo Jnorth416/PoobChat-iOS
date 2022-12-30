@@ -20,6 +20,7 @@ class ConversationRepository{
             conversation.preview = dto.preview
             conversation.unreadCount = dto.unreadCount
             conversation.updatedAt = dto.updatedAt
+            conversation.recipientId = dto.recipientId
         }
         try context.save()
     }
