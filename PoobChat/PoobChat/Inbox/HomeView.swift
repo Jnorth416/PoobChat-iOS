@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @StateObject var conversationService = ConversationService()
     @FetchRequest(sortDescriptors: []) var convos: FetchedResults<Conversation>
+    @State var isModal: Bool = false
     
     var body: some View {
         NavigationView {
@@ -44,12 +45,15 @@ struct HomeView: View {
                         .font(.system(size: 24, weight: .bold))
                 }
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Image(systemName: "bubble.left")
-                        .foregroundColor(.black)
-                }
+                    Button {
+                        self.isModal = true
+                    } label: {
+                        Image(systemName: "bubble.left")
+                            .foregroundColor(.black)
+                    }
+                    .sheet(isPresented: $isModal, content: {
+                        NewMessageView()
+                    })
             }
             .padding()
             Divider()
