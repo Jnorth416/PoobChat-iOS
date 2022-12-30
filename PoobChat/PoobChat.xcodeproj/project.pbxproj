@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22992E4E295EC33600B74CEF /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E4D295EC33600B74CEF /* ContactListView.swift */; };
+		22992E50295EC34900B74CEF /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E4F295EC34900B74CEF /* FriendService.swift */; };
+		22992E52295EC3CA00B74CEF /* FriendResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E51295EC3CA00B74CEF /* FriendResponseDTO.swift */; };
+		22992E54295EC41500B74CEF /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E53295EC41400B74CEF /* FriendRepository.swift */; };
+		22992E56295EC5F000B74CEF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E55295EC5F000B74CEF /* MockData.swift */; };
+		22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E57295EC75200B74CEF /* ContactDetailView.swift */; };
 		2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF40295A19C3003BF6EB /* PoobChatApp.swift */; };
 		2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF44295A19C4003BF6EB /* Assets.xcassets */; };
 		2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */; };
@@ -59,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22992E4D295EC33600B74CEF /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		22992E4F295EC34900B74CEF /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
+		22992E51295EC3CA00B74CEF /* FriendResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendResponseDTO.swift; sourceTree = "<group>"; };
+		22992E53295EC41400B74CEF /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		22992E55295EC5F000B74CEF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		22992E57295EC75200B74CEF /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		2706BF3D295A19C3003BF6EB /* PoobChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoobChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706BF40295A19C3003BF6EB /* PoobChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatApp.swift; sourceTree = "<group>"; };
 		2706BF44295A19C4003BF6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */,
+				22992E55295EC5F000B74CEF /* MockData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -203,6 +216,11 @@
 			isa = PBXGroup;
 			children = (
 				2774C410295B75F8003F15CF /* ContactView.swift */,
+				22992E4D295EC33600B74CEF /* ContactListView.swift */,
+				22992E4F295EC34900B74CEF /* FriendService.swift */,
+				22992E51295EC3CA00B74CEF /* FriendResponseDTO.swift */,
+				22992E53295EC41400B74CEF /* FriendRepository.swift */,
+				22992E57295EC75200B74CEF /* ContactDetailView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -376,20 +394,26 @@
 			files = (
 				27D393E8295E1B4500E9080A /* RecievedMessage.swift in Sources */,
 				27D393F9295E5E3500E9080A /* MessageChatBox.swift in Sources */,
+				22992E52295EC3CA00B74CEF /* FriendResponseDTO.swift in Sources */,
 				27D393DE295D0D4400E9080A /* ConversationService.swift in Sources */,
 				27F8A400295A46A800E007CA /* RootView.swift in Sources */,
 				27D393F7295E32DB00E9080A /* MessageResponseDTO.swift in Sources */,
 				27D393E6295E1B3700E9080A /* SenderMessage.swift in Sources */,
 				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
+				22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */,
 				2774C413295BB94C003F15CF /* UserRepository.swift in Sources */,
 				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
 				27D393FD295E6AC500E9080A /* MessageRequestDTO.swift in Sources */,
 				2774C411295B75F8003F15CF /* ContactView.swift in Sources */,
 				27D00787295A5CDF0066F9EE /* CreateAccountView.swift in Sources */,
 				2774C419295CD050003F15CF /* UserService.swift in Sources */,
+				22992E56295EC5F000B74CEF /* MockData.swift in Sources */,
+				22992E54295EC41500B74CEF /* FriendRepository.swift in Sources */,
 				2774C415295CB8EE003F15CF /* APIService.swift in Sources */,
+				22992E4E295EC33600B74CEF /* ContactListView.swift in Sources */,
 				27D393DC295D0D3500E9080A /* ConversationRepository.swift in Sources */,
 				27F8A406295A486200E007CA /* HomeView.swift in Sources */,
+				22992E50295EC34900B74CEF /* FriendService.swift in Sources */,
 				27F8A404295A483000E007CA /* LoginView.swift in Sources */,
 				27D393E2295E16C600E9080A /* MessageView.swift in Sources */,
 				27D393EA295E1FD100E9080A /* MessageList.swift in Sources */,

@@ -8,13 +8,38 @@
 import SwiftUI
 
 struct ContactView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(key: "username", ascending: true)]
+    ) var friends: FetchedResults<Friend>
+    @StateObject var friendService = FriendService()
 
-struct ContactView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactView()
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 0) {
+                nav
+                ContactListView()
+            }
+        }
+        .task {
+            friendService.getFriends { _, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    var nav: some View {
+        VStack(spacing: 0) {
+            HStack(){
+                VStack(){
+                    Text("Friends")
+                        .font(.system(size: 24, weight: .bold))
+                }
+                Spacer()
+            }
+            .padding()
+            Divider()
+        }
     }
 }

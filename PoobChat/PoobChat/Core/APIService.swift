@@ -127,26 +127,33 @@ class APIService{
         }
         task.resume()
     }
-    
-    func logoutFunc(path: String, completion: @escaping(Bool,Error?) -> Void){
+
+    func taskForDeleteRequest(path: String,
+                              isAuthed: Bool,
+                              completion: @escaping(Bool?,Error?) -> Void){
         guard let url = urlPath(url: path) else {
-            completion(false, ErrorType.invalidURL)
+            completion(nil, ErrorType.invalidURL)
             return
         }
         var request = URLRequest(url: url)
+        if isAuthed == true, let token = UserDefaults.standard.object(forKey: Constants.tokenKey) {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+        }
         request.httpMethod = "DELETE"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
-          if error != nil { // Handle error…
-              return
-          }
+            if error != nil {
+                completion(false, error)
+                return
+            }
+            completion(true, nil)
         }
         task.resume()
     }
-    
+
     private func urlPath(url: String) -> URL? {
         let url = URL(string: "\(baseURL)\(url)")
         return url
     }
 }
-
