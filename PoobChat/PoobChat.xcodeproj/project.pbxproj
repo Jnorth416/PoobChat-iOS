@@ -13,6 +13,8 @@
 		22992E54295EC41500B74CEF /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E53295EC41400B74CEF /* FriendRepository.swift */; };
 		22992E56295EC5F000B74CEF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E55295EC5F000B74CEF /* MockData.swift */; };
 		22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E57295EC75200B74CEF /* ContactDetailView.swift */; };
+		22992E5A295F650A00B74CEF /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E59295F650A00B74CEF /* AddFriendView.swift */; };
+		22992E5C295F661A00B74CEF /* AddFriendRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E5B295F661A00B74CEF /* AddFriendRequestDTO.swift */; };
 		2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF40295A19C3003BF6EB /* PoobChatApp.swift */; };
 		2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF44295A19C4003BF6EB /* Assets.xcassets */; };
 		2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		22992E53295EC41400B74CEF /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		22992E55295EC5F000B74CEF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		22992E57295EC75200B74CEF /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		22992E59295F650A00B74CEF /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
+		22992E5B295F661A00B74CEF /* AddFriendRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestDTO.swift; sourceTree = "<group>"; };
 		2706BF3D295A19C3003BF6EB /* PoobChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoobChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706BF40295A19C3003BF6EB /* PoobChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatApp.swift; sourceTree = "<group>"; };
 		2706BF44295A19C4003BF6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				22992E51295EC3CA00B74CEF /* FriendResponseDTO.swift */,
 				22992E53295EC41400B74CEF /* FriendRepository.swift */,
 				22992E57295EC75200B74CEF /* ContactDetailView.swift */,
+				22992E59295F650A00B74CEF /* AddFriendView.swift */,
+				22992E5B295F661A00B74CEF /* AddFriendRequestDTO.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				27D393F7295E32DB00E9080A /* MessageResponseDTO.swift in Sources */,
 				27D393E6295E1B3700E9080A /* SenderMessage.swift in Sources */,
 				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
+				22992E5C295F661A00B74CEF /* AddFriendRequestDTO.swift in Sources */,
 				22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */,
 				2774C413295BB94C003F15CF /* UserRepository.swift in Sources */,
 				2706BF4D295A19C4003BF6EB /* PoobChat.xcdatamodeld in Sources */,
@@ -422,6 +429,7 @@
 				27D393DA295D01E000E9080A /* Constants.swift in Sources */,
 				27D393F3295E30F600E9080A /* MessageService.swift in Sources */,
 				27D393EE295E281C00E9080A /* MessageNavBar.swift in Sources */,
+				22992E5A295F650A00B74CEF /* AddFriendView.swift in Sources */,
 				2774C41B295CD4FD003F15CF /* UserRequestDTO.swift in Sources */,
 				2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */,
 				27D393F5295E310900E9080A /* MessageRepository.swift in Sources */,

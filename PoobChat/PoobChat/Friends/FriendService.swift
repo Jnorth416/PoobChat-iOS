@@ -13,6 +13,28 @@ class FriendService: ObservableObject {
     }
     private let apiService = APIService(baseURL: Constants.baseURL)
     private let friendRepo = FriendRepository()
+
+    func addFriend(username: String, completion: @escaping (Bool, Error?) -> Void) {
+        let reqBody = AddFriendRequestDTO(username: username)
+        apiService.taskForPostRequest(path: Endpoint.friend.rawValue,
+                                      isAuthed: true, responseType: FriendResponseDTO.self,
+                                      body: reqBody) {[weak self] resp, err in
+            if let error = err {
+                completion(false, error)
+                return
+            }
+            guard let resp = resp else {
+                completion(false, nil)
+                return
+            }
+            do {
+                try self?.friendRepo.save(dtos: [resp])
+                completion(true, nil)
+            } catch {
+                completion(false, error)
+            }
+        }
+    }
     
     func getFriends(_ completion: @escaping (Bool, Error?) -> Void) {
         apiService.taskForGetRequest(path: Endpoint.friend.rawValue,

@@ -12,6 +12,7 @@ struct ContactView: View {
         sortDescriptors: [NSSortDescriptor(key: "username", ascending: true)]
     ) var friends: FetchedResults<Friend>
     @StateObject var friendService = FriendService()
+    @State var showAddSheet: Bool = false
 
     var body: some View {
         NavigationView {
@@ -19,6 +20,9 @@ struct ContactView: View {
                 nav
                 ContactListView()
             }
+        }
+        .sheet(isPresented: $showAddSheet) {
+            AddFriendView()
         }
         .task {
             friendService.getFriends { _, error in
@@ -37,6 +41,11 @@ struct ContactView: View {
                         .font(.system(size: 24, weight: .bold))
                 }
                 Spacer()
+                Button {
+                    showAddSheet = true
+                } label: {
+                    Image(systemName: "person.badge.plus")
+                }
             }
             .padding()
             Divider()
