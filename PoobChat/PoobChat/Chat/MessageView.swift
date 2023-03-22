@@ -10,14 +10,14 @@ import SwiftUI
 struct MessageView: View {
     
     @FetchRequest(sortDescriptors: []) var conversation: FetchedResults<Conversation>
-    let messageService = MessageService()
+    let messageService = MockMessageService()
     
     let conversationId: String
     let recipientId: String
     let username: String
     var body: some View {
         Divider()
-        VStack{
+        VStack {
 //            MessageNavBar()
             MessageList(convoId: conversationId)
             Divider()

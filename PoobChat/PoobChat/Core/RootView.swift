@@ -12,11 +12,11 @@ struct RootView: View {
     @FetchRequest(sortDescriptors: []) var users: FetchedResults<User>
     
         var body: some View {
-        if users.first == nil {
-            LoginView()
-        } else {
+//        if users.first == nil {
+//            LoginView()
+//        } else {
             tabBar
-        }
+//        }
     }
     
     var tabBar: some View{

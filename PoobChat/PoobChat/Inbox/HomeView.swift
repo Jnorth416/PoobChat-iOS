@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var conversationService = ConversationService()
+    @StateObject var conversationService = MockConversationService()
     @FetchRequest(sortDescriptors: []) var convos: FetchedResults<Conversation>
     @State var isModal: Bool = false
     

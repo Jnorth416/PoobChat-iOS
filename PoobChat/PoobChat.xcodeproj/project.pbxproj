@@ -15,6 +15,9 @@
 		22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E57295EC75200B74CEF /* ContactDetailView.swift */; };
 		22992E5A295F650A00B74CEF /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E59295F650A00B74CEF /* AddFriendView.swift */; };
 		22992E5C295F661A00B74CEF /* AddFriendRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22992E5B295F661A00B74CEF /* AddFriendRequestDTO.swift */; };
+		22A027B829CAAD9100C1A93B /* MockMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A027B729CAAD9100C1A93B /* MockMessageService.swift */; };
+		22A027BC29CAAF6500C1A93B /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A027BB29CAAF6500C1A93B /* Mock.swift */; };
+		22A027BE29CAB03F00C1A93B /* MockConversationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A027BD29CAB03F00C1A93B /* MockConversationService.swift */; };
 		2706BF41295A19C3003BF6EB /* PoobChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF40295A19C3003BF6EB /* PoobChatApp.swift */; };
 		2706BF45295A19C4003BF6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF44295A19C4003BF6EB /* Assets.xcassets */; };
 		2706BF48295A19C4003BF6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF47295A19C4003BF6EB /* Preview Assets.xcassets */; };
@@ -78,6 +81,9 @@
 		22992E57295EC75200B74CEF /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		22992E59295F650A00B74CEF /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		22992E5B295F661A00B74CEF /* AddFriendRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestDTO.swift; sourceTree = "<group>"; };
+		22A027B729CAAD9100C1A93B /* MockMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessageService.swift; sourceTree = "<group>"; };
+		22A027BB29CAAF6500C1A93B /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		22A027BD29CAB03F00C1A93B /* MockConversationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConversationService.swift; sourceTree = "<group>"; };
 		2706BF3D295A19C3003BF6EB /* PoobChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoobChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706BF40295A19C3003BF6EB /* PoobChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoobChatApp.swift; sourceTree = "<group>"; };
 		2706BF44295A19C4003BF6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A027BA29CAAF5400C1A93B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				22A027BB29CAAF6500C1A93B /* Mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		2706BF34295A19C3003BF6EB = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +181,7 @@
 		2706BF3F295A19C3003BF6EB /* PoobChat */ = {
 			isa = PBXGroup;
 			children = (
+				22A027BA29CAAF5400C1A93B /* Mocks */,
 				27F8A408295A4DF400E007CA /* Info.plist */,
 				27D393F1295E302300E9080A /* Inbox */,
 				2706BF71295A298E003BF6EB /* Chat */,
@@ -218,6 +233,7 @@
 				27D393F4295E310900E9080A /* MessageRepository.swift */,
 				27D393F6295E32DB00E9080A /* MessageResponseDTO.swift */,
 				27D393FC295E6AC500E9080A /* MessageRequestDTO.swift */,
+				22A027B729CAAD9100C1A93B /* MockMessageService.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -273,6 +289,7 @@
 				27D39400295F5A6C00E9080A /* NewMessageSearchField.swift */,
 				27D39402295F5BA700E9080A /* SendNewMessageField.swift */,
 				27D393FE295F598500E9080A /* NewMessageView.swift */,
+				22A027BD29CAB03F00C1A93B /* MockConversationService.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -416,6 +433,7 @@
 				27D39403295F5BA700E9080A /* SendNewMessageField.swift in Sources */,
 				27D393E6295E1B3700E9080A /* SenderMessage.swift in Sources */,
 				27D39401295F5A6C00E9080A /* NewMessageSearchField.swift in Sources */,
+				22A027BE29CAB03F00C1A93B /* MockConversationService.swift in Sources */,
 				2706BF4A295A19C4003BF6EB /* Persistence.swift in Sources */,
 				22992E5C295F661A00B74CEF /* AddFriendRequestDTO.swift in Sources */,
 				22992E58295EC75200B74CEF /* ContactDetailView.swift in Sources */,
@@ -437,6 +455,8 @@
 				27D393E2295E16C600E9080A /* MessageView.swift in Sources */,
 				27D393EA295E1FD100E9080A /* MessageList.swift in Sources */,
 				2774C41D295CD50B003F15CF /* UserResponseDTO.swift in Sources */,
+				22A027B829CAAD9100C1A93B /* MockMessageService.swift in Sources */,
+				22A027BC29CAAF6500C1A93B /* Mock.swift in Sources */,
 				27D393E0295D163500E9080A /* ConversationResponseDTO.swift in Sources */,
 				27D393DA295D01E000E9080A /* Constants.swift in Sources */,
 				27D393F3295E30F600E9080A /* MessageService.swift in Sources */,
